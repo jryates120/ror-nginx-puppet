@@ -12,7 +12,7 @@ apt-get update >> $LOGFILE
 apt-get install git >> $LOGFILE
 apt-get -y upgrade >> $LOGFILE
 
-puppet_master_ip=$(host ec2-54-191-118-126.us-west-2.compute.amazonaws.com | grep "has address" | head -1 | awk '{print $NF}')
+puppet_master_ip=$(host ec2-54-200-183-80.us-west-2.compute.amazonaws.com | grep "has address" | head -1 | awk '{print $NF}')
 echo $puppet_master_ip puppet >> /etc/hosts
 
 git clone https://github.com/jryates120/ror-nginx-puppet.git >> $LOGFILE
